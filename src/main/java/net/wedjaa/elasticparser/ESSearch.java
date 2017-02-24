@@ -49,7 +49,8 @@ import net.wedjaa.elasticparser.pager.ESEmptyPager;
 import net.wedjaa.elasticparser.pager.ESHitsPager;
 import net.wedjaa.elasticparser.pager.ESResultsPager;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
@@ -80,7 +81,7 @@ public class ESSearch implements Connection
     private int port;
     private int searchMode;
 
-    private static Logger logger = Logger.getLogger(ESSearch.class);
+    private static Logger logger = LogManager.getLogger(ESSearch.class);
 
     public final static int ES_MODE_HITS = 0;
     public final static int ES_MODE_AGGS = 1;

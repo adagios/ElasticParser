@@ -26,11 +26,12 @@ package net.wedjaa.elasticparser.pager;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ESEmptyPager implements ESResultsPager {
 
-	private Logger logger = Logger.getLogger(ESEmptyPager.class);
+	private Logger logger = LogManager.getLogger(ESEmptyPager.class);
 
 	public ESEmptyPager() {
 		logger.warn("Returning an empty pager - check the query mode!");

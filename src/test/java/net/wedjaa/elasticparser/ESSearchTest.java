@@ -31,7 +31,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.client.transport.NoNodeAvailableException;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.node.Node;
@@ -82,7 +83,7 @@ public class ESSearchTest
     private static final String SHIELD_USER = "shield_user";
     private static final String SHIELD_PASSWORD = "shield_password";
 
-    static Logger logger = Logger.getLogger(ESSearchTest.class);
+    static Logger logger = LogManager.getLogger(ESSearchTest.class);
 
     static Node elasticTestNode;
     static String clusterName;

@@ -24,7 +24,8 @@
 package net.wedjaa.elasticparser;
 
 import com.google.common.io.BaseEncoding;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -35,7 +36,7 @@ public class ESShieldServer implements Runnable{
     private int listenPort;
     private String request;
 
-    static Logger logger = Logger.getLogger(ESSearchTest.class);
+    static Logger logger = LogManager.getLogger(ESSearchTest.class);
 
     public ESShieldServer(int port) {
         logger.debug("Creating Listening Server on port " + port);

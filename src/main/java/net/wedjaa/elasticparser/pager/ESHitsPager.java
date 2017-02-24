@@ -27,7 +27,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.unit.TimeValue;
@@ -51,7 +52,7 @@ public class ESHitsPager implements ESResultsPager {
 	private long hits_count = 0;
 	private String query;
 	private SearchResponse searchResponse;
-	private Logger logger = Logger.getLogger(ESHitsPager.class);
+	private Logger logger = LogManager.getLogger(ESHitsPager.class);
 
 	public ESHitsPager(SearchResponse searchResponse, String query, int page_size, Client esClient) {
 		this.total_hits = searchResponse.getHits().totalHits();

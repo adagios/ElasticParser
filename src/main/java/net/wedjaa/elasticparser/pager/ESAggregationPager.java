@@ -31,13 +31,14 @@ import java.util.Map;
 
 import net.wedjaa.elasticparser.resolver.AggregateResolver;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.aggregations.Aggregations;
 
 public class ESAggregationPager implements ESResultsPager {
 
-	private Logger logger = Logger.getLogger(ESAggregationPager.class);
+	private Logger logger = LogManager.getLogger(ESAggregationPager.class);
 
 	private String query = "";
 	private final AggregateResolver aggregateResolver;

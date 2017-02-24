@@ -32,7 +32,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.search.aggregations.Aggregation;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.InternalAggregation;
@@ -48,7 +49,7 @@ public class AggregateResolver {
 
 	private static AggregateResolver instance = null;
 
-	private static final Logger logger = Logger.getLogger(AggregateResolver.class);
+	private static final Logger logger = LogManager.getLogger(AggregateResolver.class);
 
 	protected AggregateResolver() {
 		this.classFinder = new ClassFinder();
