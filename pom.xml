@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.wedjaa.elasticsearch</groupId>
     <artifactId>parser</artifactId>
-   <packaging>jar</packaging>
-    <name>parser</name>
+   <packaging>bundle</packaging>
     <version>3.0.0.COB-SNAPSHOT</version>
+    <name>ElasticParser</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -158,6 +158,15 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.5.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <niceManifest>true</niceManifest>
                 </configuration>
             </plugin>
         </plugins>
